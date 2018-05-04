@@ -1,11 +1,16 @@
+<h3>Yireo_ExampleKnockout: Color Listing</h3>
 <div id="color-container" data-bind="scope: 'colorListing'">
     Colors: <span data-bind="text: length">0</span>
+
+    <ul data-bind="foreach: $data">
+        <li data-bind="text: $data"></li>
+    </ul>
 </div>
 
 <script type="text/javascript">
-    require(['knockout', 'domReady!'], function (ko) {
-        var colorListing = ['blue', 'green', 'yellow', 'magenta'];
-        var colorContainer = document.getElementById('color-container');
-        ko.applyBindingsToDescendants(colorListing, colorContainer);
+    require(['ko', 'domReady!'], function (ko) {
+        var viewModel = ['blue', 'green', 'yellow', 'magenta'];
+        var container = document.getElementById('color-container');
+        ko.applyBindingsToDescendants(viewModel, container);
     });
 </script>

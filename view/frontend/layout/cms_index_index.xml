@@ -2,7 +2,14 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceBlock name="content">
-            <block template="Yireo_ExampleKnockout::colorListing.phtml" name="yireo_knockout_colorListing" before="-"/>
+            <block
+                    template="Yireo_ExampleKnockout::colorListing.phtml"
+                    name="yireo_knockout_colorListing"
+                    before="-"/>
+            <block
+                    template="Yireo_ExampleKnockout::advancedColorListing.phtml"
+                    name="yireo_knockout_advancedColorListing"
+                    before="-"/>
         </referenceBlock>
     </body>
 </page>

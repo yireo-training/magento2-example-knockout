@@ -1,0 +1,20 @@
+<h3>Yireo_ExampleKnockout: Advanced Color Listing</h3>
+<div id="advanced-color-container" data-bind="scope: 'colorListing'">
+    Colors: <span data-bind="text: $data.colors.length">0</span>
+
+    <ul data-bind="foreach: colors">
+        <li data-bind="text: ko.toJSON($data), style: {'backgroundColor': color}"></li>
+    </ul>
+
+    <form data-bind="submit: addColor">
+        <input name="color" type="text" data-bind="value: newColor" />
+        <button type="submit">Add Color</button>
+    </form>
+</div>
+
+<script type="text/javascript">
+    require(['ko', 'advancedColorListing', 'domReady!'], function (ko, viewModel) {
+        var container = document.getElementById('advanced-color-container');
+        ko.applyBindingsToDescendants(viewModel, container);
+    });
+</script>
