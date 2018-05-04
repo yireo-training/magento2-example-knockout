@@ -1,0 +1,11 @@
+<div id="color-container" data-bind="scope: 'colorListing'">
+    Colors: <span data-bind="text: length">0</span>
+</div>
+
+<script type="text/javascript">
+    require(['knockout', 'domReady!'], function (ko) {
+        var colorListing = ['blue', 'green', 'yellow', 'magenta'];
+        var colorContainer = document.getElementById('color-container');
+        ko.applyBindingsToDescendants(colorListing, colorContainer);
+    });
+</script>
